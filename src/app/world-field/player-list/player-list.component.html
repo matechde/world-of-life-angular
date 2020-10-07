@@ -1,6 +1,10 @@
 <div class="bg-dark p-2 text-white">Players</div>
-<div class="p-1">
+<div class="p-2">
   <ng-container *ngIf="player; else loginTemplate">
+    <div [ngStyle]="{'color': player.hexColor}" class="overflow-hidden">
+      <span>{{player.name}}</span><br/>
+    </div>
+    <hr>
     <div *ngFor="let player of players" [ngStyle]="{'color': player.hexColor}" class="overflow-hidden">
       <span>{{player.name}}</span><br/>
     </div>
