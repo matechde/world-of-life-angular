@@ -1,4 +1,12 @@
 <div class="vw-100 vh-100">
-  <canvas #canvas class="w-100 h-100" (click)="onClick($event)"></canvas>
+  <div class="row h-100 m-0">
+    <div class="col-sm-4 col-md-2 h-100 p-0">
+      <app-player-list></app-player-list>
+    </div>
+    <div class="col h-100 p-0 border-dark border-left">
+      <canvas #canvas class="w-100 h-100" (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)"
+              (mouseup)="onMouseUp($event)"></canvas>
+    </div>
+  </div>
 </div>
 
